@@ -5,4 +5,12 @@ const conexion = mysql.createConnection({
     user:'root',
     password:'',
     database:'crud_nodejs_db'
+});
+
+conexion.connect((error)=>{
+    if(error){
+        console.log('El error de la conecxion es :' + error)
+        return
+    }  console.log('Conectado a la base de datos MySQL')
 })
+module.exports = conexion;
