@@ -6,13 +6,16 @@ const conexion = require('./DataBase/DB');
 
 //motor de plantillas
 router.get('/', (req, res)=>{
-   conexion.query('SELECT ID, USER, ROL FROM users',(error, results)=>{
-    if(error){
-        throw error;
-    }else{
-        res.send(results); 
-    }
-   }) 
+
+    res.render('Index');
+    
+//    conexion.query('SELECT ID, USER, ROL FROM users',(error, results)=>{
+//     if(error){
+//         throw error;
+//     }else{
+//         res.send(results); 
+//     }
+//    }) 
 })
 
 //Exportar el modulo
